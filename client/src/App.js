@@ -46,7 +46,15 @@ function App() {
   // Apply Dark Mode class to body
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", darkMode); // Save in localStorage
   }, [darkMode]);
+
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    if (savedDarkMode !== null) {
+      setDarkMode(JSON.parse(savedDarkMode));
+    }
+  }, []);
 
   return (
     <Router>
