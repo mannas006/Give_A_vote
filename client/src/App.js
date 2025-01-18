@@ -38,7 +38,7 @@ const ProtectedRoute = ({ children }) => {
 };
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Set initial mode to dark
 
   // 🌙 Toggle Dark Mode
   const toggleDarkMode = () => setDarkMode(!darkMode);
