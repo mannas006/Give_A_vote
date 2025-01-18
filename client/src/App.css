@@ -1,38 +1,98 @@
+/* Global Reset for Consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Responsive Container */
 .App {
   text-align: center;
+  padding: 1rem; /* Adds spacing */
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the width on larger screens */
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header Adjustments */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
+/* Logo Adjustments for Mobile */
+.App-logo {
+  height: 30vmin;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  pointer-events: none;
+}
+
+/* Links */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-logo {
+    height: 40vmin;
+  }
+
+  .App-link {
+    font-size: 0.9rem; /* Reduce text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: 1rem; /* Adjust font size for small devices */
+    padding: 1rem;
+  }
+
+  .App-logo {
+    height: 50vmin;
+  }
+
+  .App {
+    padding: 1rem;
+  }
+}
+/* Navbar mobile menu */
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+/* Add responsiveness */
+@media (min-width: 640px) {
+  .sm\\:hidden {
+    display: none !important;
+  }
+  .sm\\:flex {
+    display: flex !important;
   }
 }
